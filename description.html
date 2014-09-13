@@ -1,0 +1,524 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="description/Combined.css,1:ImageSprite;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Content/Css:1&amp;amp;hashKey=E7560C71640616C5057FAEACB58DCB00" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="description/2f95808e-ca34-4249-88ff-44fabe33cdc0Combined.css,1:LinkList,2:ImageSprite,2:SiteFeedbackLink;/Areas/Epx/Themes/Msdn/Content:0,/Areas/Epx/Themes/Base/Content:1,/Areas/Epx/Content/Css:2&amp;amp;hashKey=EEE39C2D6B93379FDAF50337BE99AF8C" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Sockets with Adaptive Communication Environment (ACE) Framework</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="description/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="description/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Sockets with Adaptive Communication Environment (ACE) Framework</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            C++, ACE
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Sockets, Network
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary Language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Last Updated</label>
+                    <div id="LastUpdated">4/26/2013</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="http://code.msdn.microsoft.com/Sockets-with-Adaptive-c9f5cc2b">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy Code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>Introduction</h1>
+<div style="font-size:small">
+<div>Adaptive Communication Environment, or ACE for short,&nbsp;is a C&#43;&#43; framework to develop portable, high-performance networked multithreaded applications. References below introduce in greater detail to the history of the framework.</div>
+<p><a title="ACE" rel="nofollow" href="http://www.cs.wustl.edu/~schmidt/ACE.html" >ACE</a>&nbsp;provides abstractions for sockets, demultiplexing loops, threads, synchronization primitives and can be used in high-performance, distributed real-time
+ and embedded systems. ACE customers are Boeing and NASA, Facebook and Intel also use the framework - just a very short list of&nbsp;many ACE customers.<br>
+<br>
+<a title="TAO" rel="nofollow" href="http://www.cs.wustl.edu/~schmidt/TAO.html" >TAO</a> is an implementation of&nbsp;CORBA Object Request Broker (ORB).</p>
+<p><em>References:</em></p>
+<div><a href="http://en.wikipedia.org/wiki/Adaptive_Communication_Environment" >About ACE</a>&nbsp;</div>
+<div><a title="ACE documentation" href="http://doxygen.theaceorb.nl/libace-doc/index.html" >ACE documentation</a></div>
+<div><a href="http://download.dre.vanderbilt.edu/" >Download</a></div>
+<div><a href="http://software.intel.com/en-us/articles/building-acetao-with-intelr-c-compiler-for-linux" >Building ACE/TAO with Intel C&#43;&#43; Compiler for Linux</a></div>
+<div><a href="http://software.intel.com/en-us/articles/intel-c-compiler-for-linux-building-acetao-with-intel-c-compiler-for-linux" >Building ACE&#43;TAO with Intel C&#43;&#43; Compiler for Linux</a></div>
+<p>There is little information about ACE on the Internet and the 3 books to learn the framework are over ten years old, despite the fact the framework is still actively maintained. The framework is large, over 2 million lines of code, and it takes an effort
+ to learn how to use it. The solution that I provide here has several projects, each introducing to some of the concepts of the framework for network programming. I did not go into other capabilities the framework provides such as multithreading, shared memory
+ management, service configuration, timers, etc. My interest was strictly in how to use it to abstract sockets. I hope it will make it easier for some of you to expand on my samples.</p>
+<div><img id="81259" src="description/Solution.PNG" alt="" width="288" height="433"></div>
+<p><em>Trace </em>samples show how to instrument your code to output configurable debug,&nbsp;trace, or error messages.
+<em>Server </em>samples show how to build server TCP endpoints to listen for <em>
+Client </em>requests. Any of the clients work with any of the servers. To launch a project, right-click on it and select Debug -&gt; Start new instance.</p>
+<div><img id="81276" src="description/Debug.png" alt="" width="830" height="884"></div>
+<p>The following image shows server and client talking to each other.</p>
+<div><img id="81277" src="description/Console.png" alt="" width="841" height="467"></div>
+<div>&nbsp;</div>
+<p>Udp projects demonstrate unicast, broadcast, and multicast support by ACE framework. Here's a UDP dgram receiver example</p>
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">void EchoDatagram()
+{
+	ACE_INET_Addr  listener(27015, ACE_LOCALHOST);
+	ACE_INET_Addr  sender;
+	ACE_SOCK_DGRAM udp(listener);
+
+	char buffer[BUFSIZ];
+	size_t size = sizeof(buffer);
+
+	cout &lt;&lt; &quot;waiting for a udp datagram.&quot; &lt;&lt; endl;
+
+	ssize_t received = udp.recv(buffer, size, sender);
+
+	if (received &gt; 0)
+	{
+		udp.send(buffer, size, sender);
+	}
+
+	udp.close();
+
+	cout &lt;&lt; &quot;received: &quot; &lt;&lt; received &lt;&lt; &quot; bytes&quot; &lt;&lt; endl;
+}
+
+int ACE_TMAIN(int, ACE_TCHAR*[])
+{
+	EchoDatagram();
+	return 0;
+}
+</pre>
+<div class="preview">
+<pre class="js"><span class="js__operator">void</span>&nbsp;EchoDatagram()&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_INET_Addr&nbsp;&nbsp;listener(<span class="js__num">27015</span>,&nbsp;ACE_LOCALHOST);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_INET_Addr&nbsp;&nbsp;sender;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_SOCK_DGRAM&nbsp;udp(listener);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;buffer[BUFSIZ];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;size_t&nbsp;size&nbsp;=&nbsp;sizeof(buffer);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="js__string">&quot;waiting&nbsp;for&nbsp;a&nbsp;udp&nbsp;datagram.&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ssize_t&nbsp;received&nbsp;=&nbsp;udp.recv(buffer,&nbsp;size,&nbsp;sender);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(received&nbsp;&gt;&nbsp;<span class="js__num">0</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;udp.send(buffer,&nbsp;size,&nbsp;sender);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;udp.close();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="js__string">&quot;received:&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;received&nbsp;&lt;&lt;&nbsp;<span class="js__string">&quot;&nbsp;bytes&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+int&nbsp;ACE_TMAIN(int,&nbsp;ACE_TCHAR*[])&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;EchoDatagram();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__num">0</span>;&nbsp;
+<span class="js__brace">}</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+A datagram can be sent to this receiver using the following sample:
+<p>&nbsp;</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">int SendDatagram()
+{
+	const char* message = &quot;this is a message!\n&quot;;
+
+	ACE_INET_Addr  sender	(27016, ACE_LOCALHOST);
+	ACE_INET_Addr  listener	(27015, ACE_LOCALHOST);
+	ACE_SOCK_DGRAM udp		(sender);
+
+	ssize_t sent = udp.send(message, ACE_OS_String::strlen(message) &#43; 1, listener);
+
+	char buffer[BUFSIZ];
+	size_t size = sizeof(buffer);
+	ssize_t received = udp.recv(buffer, size, listener);
+
+	udp.close();
+
+	if (sent == -1)
+	{
+		ACE_ERROR_RETURN((LM_ERROR, ACE_TEXT(&quot;%p\n&quot;), ACE_TEXT(&quot;send&quot;)), -1);
+	}
+
+	cout &lt;&lt; &quot;sent:     &quot; &lt;&lt; sent &lt;&lt; &quot; bytes&quot; &lt;&lt; endl;
+	cout &lt;&lt; &quot;received: &quot; &lt;&lt; received &lt;&lt; &quot; bytes&quot; &lt;&lt; endl;
+
+	return 0;
+}
+
+int ACE_TMAIN(int, ACE_TCHAR*[])
+{
+	int hr = SendDatagram();
+	return hr;
+}
+</pre>
+<div class="preview">
+<pre class="js">int&nbsp;SendDatagram()&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">const</span>&nbsp;char*&nbsp;message&nbsp;=&nbsp;<span class="js__string">&quot;this&nbsp;is&nbsp;a&nbsp;message!\n&quot;</span>;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_INET_Addr&nbsp;&nbsp;sender&nbsp;&nbsp;&nbsp;&nbsp;(<span class="js__num">27016</span>,&nbsp;ACE_LOCALHOST);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_INET_Addr&nbsp;&nbsp;listener&nbsp;&nbsp;&nbsp;&nbsp;(<span class="js__num">27015</span>,&nbsp;ACE_LOCALHOST);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_SOCK_DGRAM&nbsp;udp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(sender);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ssize_t&nbsp;sent&nbsp;=&nbsp;udp.send(message,&nbsp;ACE_OS_String::strlen(message)&nbsp;&#43;&nbsp;<span class="js__num">1</span>,&nbsp;listener);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;char&nbsp;buffer[BUFSIZ];&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;size_t&nbsp;size&nbsp;=&nbsp;sizeof(buffer);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ssize_t&nbsp;received&nbsp;=&nbsp;udp.recv(buffer,&nbsp;size,&nbsp;listener);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;udp.close();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(sent&nbsp;==&nbsp;-<span class="js__num">1</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ACE_ERROR_RETURN((LM_ERROR,&nbsp;ACE_TEXT(<span class="js__string">&quot;%p\n&quot;</span>),&nbsp;ACE_TEXT(<span class="js__string">&quot;send&quot;</span>)),&nbsp;-<span class="js__num">1</span>);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="js__string">&quot;sent:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;sent&nbsp;&lt;&lt;&nbsp;<span class="js__string">&quot;&nbsp;bytes&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="js__string">&quot;received:&nbsp;&quot;</span>&nbsp;&lt;&lt;&nbsp;received&nbsp;&lt;&lt;&nbsp;<span class="js__string">&quot;&nbsp;bytes&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__num">0</span>;&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+int&nbsp;ACE_TMAIN(int,&nbsp;ACE_TCHAR*[])&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;hr&nbsp;=&nbsp;SendDatagram();&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;hr;&nbsp;
+<span class="js__brace">}</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">By convention, like many other frameworks, ACE utilizes debug and release libraries which can be loaded in code using
+<span style="color:#339966">#pragma comment</span> or by listing them in the Linker properties dialog.</div>
+<div class="endscriptcode">&nbsp;</div>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">#if _DEBUG
+#pragma comment(lib, &quot;aced&quot;)
+#else
+#pragma comment(lib, &quot;ace&quot;)
+#endif
+</pre>
+<div class="preview">
+<pre class="js">#<span class="js__statement">if</span>&nbsp;_DEBUG&nbsp;
+#pragma&nbsp;comment(lib,&nbsp;<span class="js__string">&quot;aced&quot;</span>)&nbsp;
+#<span class="js__statement">else</span>&nbsp;
+#pragma&nbsp;comment(lib,&nbsp;<span class="js__string">&quot;ace&quot;</span>)&nbsp;
+#endif&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p class="endscriptcode">&nbsp;Following code example shows simple variants of trace macros:</p>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">int ACE_TMAIN(int, ACE_TCHAR*[])
+{
+	ACE_TRACE(ACE_TEXT(&quot;main&quot;));
+	ACE_DEBUG((LM_INFO, ACE_TEXT(&quot;%IHi Mom\n&quot;)));
+
+	foo();
+
+	ACE_DEBUG((LM_INFO, ACE_TEXT(&quot;%IGoodnight\n&quot;)));
+
+	return 0;
+}
+
+void foo()
+{
+	ACE_TRACE(ACE_TEXT(&quot;foo&quot;));
+	ACE_DEBUG((LM_INFO, ACE_TEXT(&quot;%IHowdy Partner\n&quot;)));
+}
+</pre>
+<div class="preview">
+<pre class="js">int&nbsp;ACE_TMAIN(int,&nbsp;ACE_TCHAR*[])&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_TRACE(ACE_TEXT(<span class="js__string">&quot;main&quot;</span>));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_DEBUG((LM_INFO,&nbsp;ACE_TEXT(<span class="js__string">&quot;%IHi&nbsp;Mom\n&quot;</span>)));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;foo();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_DEBUG((LM_INFO,&nbsp;ACE_TEXT(<span class="js__string">&quot;%IGoodnight\n&quot;</span>)));&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__num">0</span>;&nbsp;
+<span class="js__brace">}</span>&nbsp;
+&nbsp;
+<span class="js__operator">void</span>&nbsp;foo()&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_TRACE(ACE_TEXT(<span class="js__string">&quot;foo&quot;</span>));&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_DEBUG((LM_INFO,&nbsp;ACE_TEXT(<span class="js__string">&quot;%IHowdy&nbsp;Partner\n&quot;</span>)));&nbsp;
+<span class="js__brace">}</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<p class="endscriptcode">&nbsp;ACE server using reactor pattern can be written with just a few lines:</p>
+<div class="endscriptcode">
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">int ACE_TMAIN(int, ACE_TCHAR*[])
+{
+	ACE_INET_Addr		listenAddress(27015, ACE_LOCALHOST);
+	
+	// Subscribe to events on a specific port
+	ClientAcceptor acceptor;
+	acceptor.reactor(ACE_Reactor::instance());			// Needed with ClientAcceptor
+	int hr = acceptor.open(listenAddress);
+
+	if (hr == -1)
+	{
+		return 1;
+	}
+
+	cout &lt;&lt; &quot;Listening for incoming connections...&quot; &lt;&lt; endl;
+
+	ACE_Reactor::instance()-&gt;run_reactor_event_loop();
+
+	return 0;
+}
+</pre>
+<div class="preview">
+<pre class="js">int&nbsp;ACE_TMAIN(int,&nbsp;ACE_TCHAR*[])&nbsp;
+<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_INET_Addr&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;listenAddress(<span class="js__num">27015</span>,&nbsp;ACE_LOCALHOST);&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;Subscribe&nbsp;to&nbsp;events&nbsp;on&nbsp;a&nbsp;specific&nbsp;port</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ClientAcceptor&nbsp;acceptor;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;acceptor.reactor(ACE_Reactor::instance());&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__sl_comment">//&nbsp;Needed&nbsp;with&nbsp;ClientAcceptor</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;int&nbsp;hr&nbsp;=&nbsp;acceptor.open(listenAddress);&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">if</span>&nbsp;(hr&nbsp;==&nbsp;-<span class="js__num">1</span>)&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">{</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__num">1</span>;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__brace">}</span>&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;cout&nbsp;&lt;&lt;&nbsp;<span class="js__string">&quot;Listening&nbsp;for&nbsp;incoming&nbsp;connections...&quot;</span>&nbsp;&lt;&lt;&nbsp;endl;&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;ACE_Reactor::instance()-&gt;run_reactor_event_loop();&nbsp;
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="js__statement">return</span>&nbsp;<span class="js__num">0</span>;&nbsp;
+<span class="js__brace">}</span>&nbsp;
+</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;All code is well commented explaining api's in use.</div>
+</div>
+</div>
+</div>
+<div>&nbsp;</div>
+<div>&nbsp;</div>
+<h2><span style="font-size:small">Building ACE</span></h2>
+<dl>
+<p>I used 6.1.8 version of the framework, where stable versions are x.x.0 and work in progress has last number non-zero and could have bugs consequently. Download does not have binaries, you have to build them yourself. This is a big framework and the task
+ takes time to accomplish. To simplify, I provided all required include, library and dll files in the ace.zip archive shown below.</p>
+<div><img id="81280" src="description/ace-zip.PNG" alt="" width="611" height="570"></div>
+</dl>
+<p class="endscriptcode">If you build the library yourself you should extract the framework into ace_wrappers folder. If you use file that I provide in the ace.zip file you can place them anywhere, I copied them to c:\ace folder shown below.</p>
+<div class="endscriptcode"><img id="81281" src="description/wrappers.PNG" alt="" width="697" height="223"></div>
+<p class="endscriptcode"><img id="81282" src="description/ace.PNG" alt="" width="498" height="230"></p>
+<p class="endscriptcode">The drill is the same as for any framework: dll's from x64 folder should be copied to system32 or you can create an environment variable for them. You have to create an environment variable for the ace (or ace_wrappers) folder. You
+ can do it using powershell with the following command:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C&#43;&#43;</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">cplusplus</span>
+<pre class="hidden">[environment]::SetEnvironmentVariable(&quot;ACE_ROOT&quot;, &quot;Machine&quot;, &quot;c:\ace&quot;)</pre>
+<div class="preview">
+<pre class="cplusplus">[environment]::SetEnvironmentVariable(<span class="cpp__string">&quot;ACE_ROOT&quot;</span>,&nbsp;<span class="cpp__string">&quot;Machine&quot;</span>,&nbsp;<span class="cpp__string">&quot;c:\ace&quot;</span>)</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;<img id="81284" src="description/powershell.PNG" alt="" width="695" height="77"></div>
+<p class="endscriptcode">That's how ace folder structure will look after all is done, where c:\ace\<span style="color:#ff0000">ace</span> folder contains all includes.</p>
+<div class="endscriptcode"><img id="81285" src="description/ace-folder-structure.PNG" alt="" width="572" height="315"></div>
+<p class="endscriptcode">Modify Visual Studio C&#43;&#43; directories and you are ready to run the code:</p>
+<div class="endscriptcode"><img id="81287" src="description/vs-properties.PNG" alt="" width="851" height="606"></div>
+<div>
+<div class="endscriptcode">
+<div class="endscriptcode">
+<div class="endscriptcode">
+<div class="endscriptcode">
+<div class="endscriptcode"></div>
+<div class="endscriptcode"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div style="font-size:small">
+<div class="endscriptcode" style="font-size:small">
+<h2><span style="font-size:small">Summary</span></h2>
+<dl>
+<div>Hope this quick introduction to ACE framework will help you to get started. It is great to compare different styles and patterns when learning some concept or another and ACE is definitely a very well built set of libraries to enrich your programming and
+ design skills.</div>
+</dl>
+</div>
+<div class="endscriptcode">&nbsp;</div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>
