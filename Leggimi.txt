@@ -1,0 +1,7 @@
+Per compilare correttamente occorre scompattare ACE.6.1.8.zip nella cartella C++; i progetti
+sono configurati per linkare e includere da lì.
+Per eseguire occorre copiare le dll nel folder di output C++\x64\Debug|Release.
+
+NOTA: le dll in ACE\x86 NON sono per win32 ma, per errore, sono anche loro x64, quindi la
+configurazione win32 non compila.
+
