@@ -45,7 +45,7 @@ int SendMulticast()
 {
 	const char* message = "this is a message!\n";
 
-	ACE_INET_Addr		 listener;//(27015, ACE_LOCALHOST);
+	ACE_INET_Addr		 listener;// (27015, ACE_LOCALHOST);
 	ACE_INET_Addr		 sender	(27016, ACE_LOCALHOST);
 	ACE_SOCK_Dgram_Mcast udp;
 
