@@ -32,11 +32,9 @@ namespace Bisque
 	class TimerHandler : public ACE_Event_Handler
 	{
 	public:
-
 		//
 		// ACE_Event_Handler implementations
 		//
-
 		int handle_timeout(const ACE_Time_Value& currentTime, const void* = nullptr)
 		{
 			time_t epoch = (static_cast<timespec_t>(currentTime)).tv_sec;
